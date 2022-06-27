@@ -1,0 +1,13 @@
+diff --git a/node_modules/next/dist/client/image.d.ts b/node_modules/next/dist/client/image.d.ts
+index b30740a..6b44415 100644
+--- a/node_modules/next/dist/client/image.d.ts
++++ b/node_modules/next/dist/client/image.d.ts
+@@ -40,7 +40,7 @@ export declare type ImageProps = Omit<JSX.IntrinsicElements['img'], 'src' | 'src
+     blurDataURL?: string;
+     unoptimized?: boolean;
+     objectFit?: ImgElementStyle['objectFit'];
+-    objectPosition?: ImgElementStyle['objectPosition'];
++    objectPosition?: ImgElementStyle['objectPosition']& StringImageProps;
+     onLoadingComplete?: OnLoadingComplete;
+ };
+ export default function Image({ src, sizes, unoptimized, priority, loading, lazyRoot, lazyBoundary, className, quality, width, height, style, objectFit, objectPosition, onLoadingComplete, placeholder, blurDataURL, ...all }: ImageProps): JSX.Element;
